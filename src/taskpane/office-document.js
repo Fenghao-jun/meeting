@@ -18,3 +18,15 @@ const insertText = async (text) => {
 };
 
 export default insertText;
+
+export const setMeetingTime = () => {
+  const start = new Date(); // Represents current date and time.
+  start.setDate(start.getDate() + 2); // Add 2 days to current date.
+  Office.context.mailbox.item.start.setAsync(start, (result) => {
+    if (result.status !== Office.AsyncResultStatus.Succeeded) {
+      console.error(`Action failed with message ${result.error.message}`);
+      return;
+    }
+    console.log(`Successfully set start date and time to ${start}`);
+  });
+};

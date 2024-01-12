@@ -4,5 +4,10 @@
   ],
   "extends": [
     "plugin:office-addins/react"
-  ]
+  ],
+  "rules": {
+    "no-undef":"off",
+    "react/prop-types":"off",
+    "@typescript-eslint/no-unused-vars":"warn"
+  }
 }

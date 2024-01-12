@@ -5,7 +5,7 @@ import { FluentProvider, webLightTheme } from "@fluentui/react-components";
 
 /* global document, Office, module, require */
 
-const title = "Contoso Task Pane Add-in";
+const title = "会议预约";
 
 const rootElement = document.getElementById("container");
 const root = createRoot(rootElement);
